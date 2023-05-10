@@ -24,10 +24,10 @@
         <?php
         $url = parse_url(getenv("mysql://b7eb69c7de4c8b:ed3447d4@us-cdbr-east-06.cleardb.net/heroku_2ebf4257da5c43d?reconnect=true"));
         
-        $host = 'localhost';
-        $user = 'root';
-        $password = 'root';
-        $database = 'gallery_letters';
+        $host = getenv('PMA_HOST');
+        $user = getenv('PMA_USER');
+        $password = getenv('PMA_PASSWORD');
+        $database = getenv('PMA_DM');
         $conn = mysqli_connect($host, $user, $password, $database);
 
         // // Check connection
