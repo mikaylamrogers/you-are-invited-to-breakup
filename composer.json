@@ -1,3 +1,10 @@
 {
-    
+  "require": {
+    "php": "^7.4",
+    "ext-mbstring": "*",
+    "ext-xml": "*"
+  },
+  "require-dev": {
+    "heroku/php": "^1.0.0"
+  }
 }
