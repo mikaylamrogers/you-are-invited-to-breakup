@@ -9,7 +9,7 @@
 <h1>CONGRATULATIONS ON BREAKING UP!</h1>
 
 <?php
-    include("../../../config.php");
+$url = parse_url(getenv("mysql://b7eb69c7de4c8b:ed3447d4@us-cdbr-east-06.cleardb.net/heroku_2ebf4257da5c43d?reconnect=true"));
 // Connect to MySQL server
 $host = 'localhost';
 $user = 'root';
