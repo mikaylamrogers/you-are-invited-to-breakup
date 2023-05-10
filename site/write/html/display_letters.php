@@ -22,6 +22,8 @@
     <div class="inside">
 
         <?php
+        include("../../../config.php");
+        
         $host = 'localhost';
         $user = 'root';
         $password = 'root';
