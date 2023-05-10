@@ -9,6 +9,7 @@
 <h1>CONGRATULATIONS ON BREAKING UP!</h1>
 
 <?php
+    include("../../../config.php");
 // Connect to MySQL server
 $host = 'localhost';
 $user = 'root';
