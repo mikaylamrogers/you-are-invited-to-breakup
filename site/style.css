@@ -1,0 +1,256 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #EBE7DD;
+    overflow: hidden;
+    overflow-x: hidden;
+    background-image: url(images/grid.png);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#grid {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: darken;
+}
+
+.flex-container {
+    display: flex;
+    padding-top: 1%;
+}
+
+.flex-child {
+    width: 25%;
+    height: 8%;
+    background-color: #ECE1BA;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 3;
+}  
+
+.flex-child.middle {
+    background-color: #E4DBB9;
+}
+
+.flex-child.right {
+    background-color: #DAD0AC;
+}
+
+#topManila {
+    background-color: #fcf0c5;
+    width: 78.4%;
+    height: 85%;
+    top: 13%;
+    z-index: 999999;
+    padding-left: 20%;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(156, 152, 152, 1);
+    position: absolute;
+}
+
+#manila {
+    width: 80%;
+    height: 90%;
+    z-index: -100;
+    padding-left: 20%;
+    background-color: #ECE1BA;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(156, 152, 152, 1);
+}
+
+@font-face {
+    font-family: FT88;
+    src: url('fonts/FT88-Serif.ttf');
+}
+
+@font-face {
+    font-family: FT88-Italic;
+    src: url('fonts/FT88-Italic.otf');
+}
+
+h1 {
+    font-family: FT88-Italic;
+    color: #121CFF;
+    opacity: 88%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+    text-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+}
+
+#stampGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    z-index: 999;
+}
+
+#stampGrid2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    z-index: 999;
+}
+
+.inside {
+    position: absolute;
+    padding: 5%;
+    width: 80%;
+    height: auto;
+    left: 5%;
+    top: 1%;
+}
+
+/* stamp size */
+.stampImg {
+    width: 90%;
+    z-index: 900;
+}
+
+.recBox {
+    width: 75%; 
+    height: 85%; 
+    position: absolute;
+    z-index: 100;
+    opacity: 0.8;
+    background-image: url(images/grid.png);
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#stamp1, #recBox1 {
+    padding-left: 5%;
+}
+
+#stamp2 {
+    rotate: 3deg;
+}
+
+#recBox2 {
+    width: 78%;
+    margin-right: 3%;
+}
+
+#stamp3, #recBox3 {
+    padding-left: 5%;
+}
+
+#stamp4 {
+    rotate: 3deg;
+}
+
+#recBox4 {
+    width: 75%;
+}
+
+#stamp5 {
+    rotate: -3deg;
+    width: 70%;
+}
+
+#recBox5 {
+    width: 64%;
+}
+
+#stamp6 {
+    rotate: 3deg;
+    width: 70%;
+}
+
+#recBox6 {
+    width: 64%;
+}
+
+#stamp7 {
+    rotate: -3deg;
+    translate: -1px;
+    width: 70%;
+}
+
+#recBox7 {
+    width: 64%;
+}
+
+#stamp8 {
+    rotate: -2deg;
+}
+
+#recBox8 {
+    width: 75%;
+}
+
+model-viewer {
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    filter: grayscale(100%);
+    --progress-bar-color: transparent;
+    z-index: 9999;
+}
+
+.stamp  {
+    display: grid;
+    place-items: center;
+}
+
+#iphone6 {
+    rotate: -180deg;
+} 
+
+#iphone4 {
+    rotate: 90deg;
+}
+
+#ipodnano {
+    rotate: 45deg;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 600px) {
+    model-viewer {
+        width: 60%;
+        height: 60%;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    model-viewer {
+        width: 45%;
+        height: 45%;
+    }
+    h1 {
+    font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    model-viewer {
+        width: 55%;
+        height: 55%;
+    }
+}
+@media screen and (min-width: 1080px) {
+    model-viewer {
+        width: 65%;
+        height: 65%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    model-viewer {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+

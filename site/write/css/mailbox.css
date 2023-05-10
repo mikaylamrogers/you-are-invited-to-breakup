@@ -1,0 +1,217 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url('../../images/grid.png');
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#grid {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: darken;
+}
+
+.flex-container {
+    display: flex;
+    padding-top: 1%;
+}
+
+.flex-child {
+    width: 25%;
+    height: 8%;
+    background-color: #ECE1BA;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 3;
+}  
+
+.flex-child.middle {
+    background-color: #E4DBB9;
+}
+
+.flex-child.right {
+    background-color: #DAD0AC;
+}
+
+#manila {
+    width: 100%;
+    height: 90%;
+    z-index: -100;
+    background-color:  #DAD0AC;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(156, 152, 152, 1);
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+}
+
+@font-face {
+    font-family: FT88;
+    src: url('fonts/FT88-Serif.ttf');
+}
+
+@font-face {
+    font-family: FT88-Italic;
+    src: url('fonts/FT88-Italic.otf');
+}
+
+h1 {
+    font-family: FT88-Italic;
+    color: #121CFF;
+    opacity: 88%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 10;
+    text-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+    overflow-y: hidden;
+    padding-top: 2%;
+    width: 100%;
+}
+
+.inside {
+    position: relative;
+    padding: 10%;
+    width: 80%;
+    height: auto;
+    left: 5%;
+    top: 1%;
+}
+
+/* Dear & Cordially */
+.salutation {
+    font-size: 1.8vw;
+    line-height: 1;
+    font-family: FT88;
+}
+
+/* You gave me... */
+#message {
+    font-family: FT88;
+    font-size: 1.4vw;
+    line-height: 1.2;
+}
+
+.letters {
+    display: flex;
+    gap: 100px;
+}
+
+div.letter {
+    width: 600px !important;
+    height: 400px;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+    flex-shrink: 0;
+}
+
+div.letters .letter:first-of-type {
+    width: 600px;
+}
+
+.stamp {
+    z-index: 99999999;
+    display: grid;
+    justify-content: end;
+}
+
+.stampImg {
+    width: 90px;
+    z-index: 900;
+}
+
+.recBox {
+    margin-left: 512px;
+    margin-top: 5px;
+    width: 80px; 
+    height: 90px; 
+    position: absolute;
+    z-index: 100;
+    opacity: 0.8;
+    background-image: url('../../images/grid.png');
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+model-viewer {
+    margin-left: 512px;
+    position: absolute;
+    width: 83px;
+    height: 92px;
+    filter: grayscale(100%);
+    --progress-bar-color: transparent;
+    z-index: 9999;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+    model-viewer {
+        width: 15%;
+        height: 15%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .letters {
+        display: flex;
+        gap: 100px;
+    }
+    
+    div.letter {
+        width: 300px !important;
+        height: 400px;
+        padding: 50px;
+    }
+
+    /* Dear & Cordially */
+    .salutation {
+        font-size: 3vw;
+    }
+
+    /* You gave me... */
+    #message {
+        font-family: FT88;
+        font-size: 2.9vw;
+        line-height: 1.2;
+    }   
+    
+    .stampImg {
+        width: 90px;
+        z-index: 900;
+    }
+    
+    .recBox {
+        margin-left: 212px;
+        margin-top: 5px;
+        width: 80px; 
+        height: 90px; 
+        position: absolute;
+        z-index: 100;
+        opacity: 0.8;
+        background-image: url('../../images/grid.png');
+        background-attachment: fixed;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    model-viewer {
+        margin-left: 215px;
+        position: absolute;
+        width: 83px;
+        height: 92px;
+        filter: grayscale(100%);
+        --progress-bar-color: transparent;
+        z-index: 9999;
+    }
+}
+
+

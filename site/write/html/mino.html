@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <title>Dear Video Recorder</title>
+</head>
+<body>
+    <div class="inside">
+        <div class="stamp">
+            <model-viewer src="models/mino.glb" id="dsi" class="stampModel" auto-rotate progressive></model-viewer> 
+            <div class="recBox" id="recBox1"></div>  
+            <img src="../../images/stamp.png" class="stampImg" id="stamp1">
+        </div>
+
+        <h1>WRITE YOUR LETTER:</h1>
+
+        <section class="writing"></section>
+                <img src="../images/rectangle.png" id="paper">
+
+            <form method="POST" action="write_data.php" id="writeLetter">
+                    <div class="salutation">Dear <input type="text" id="name" name="name1" placeholder="Video Recorder" style="width: 27%;">,</div><br>
+
+                    <div id="message">
+                    You gave me a whole new way to capture <input type="text" class="blank" name="blank1" placeholder="life" style="width: 14%;">.
+                    I loved reliving all our memories together. But I'm afraid I've found someone else—someone who is up to date with my passions, like posting on <input tye="text" class="blank" name="blank2" placeholder="TikTok"> or <input type="text" class="blank" name="blank3" placeholder="livestreaming" style="width: 40%;"> on <input type="text" class="blank" name="blank4" placeholder="Twitch">.
+                    </div>
+                    
+                    <br><div class="salutation">Cordially,<br> <input type="text" id="name" name="name2" placeholder="Ambrose"></div>
+            </form>
+
+        </section>
+
+        <div class="buttons">
+            <div class="col">
+                <button type="reset" form="writeLetter">RESET</button><br>
+                <a href="../../index.html"><button>BACK</button></a>
+            </div>
+
+            <div class="col">
+                <button type="submit" form="writeLetter">SEND</button><br>
+                <!-- <button type="#">SAVE</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- background, manila, tabs -->
+
+    <div class="flex-container">
+        <div class="flex-child left">📀</div>
+        <div class="flex-child middle">🖊️</div>
+        <div class="flex-child right">📬</div>
+    </div>
+    
+    <div id="manila"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>

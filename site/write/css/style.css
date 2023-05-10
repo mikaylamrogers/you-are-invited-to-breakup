@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../../images/grid.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#grid {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: darken;
+}
+
+.flex-container {
+    display: flex;
+    padding-top: 1%;
+}
+
+.flex-child {
+    width: 25%;
+    height: 8%;
+    background-color: #ECE1BA;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 3;
+}  
+
+.flex-child.middle {
+    background-color: #E4DBB9;
+}
+
+.flex-child.right {
+    background-color: #DAD0AC;
+}
+
+#manila {
+    width: 80%;
+    height: 90%;
+    z-index: -100;
+    padding-left: 20%;
+    background-color:  #E4DBB9;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(156, 152, 152, 1);
+}
+
+@font-face {
+    font-family: FT88;
+    src: url('fonts/FT88-Serif.ttf');
+}
+
+@font-face {
+    font-family: FT88-Italic;
+    src: url('fonts/FT88-Italic.otf');
+}
+
+h1 {
+    font-family: FT88-Italic;
+    color: #121CFF;
+    opacity: 88%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+    text-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+}
+
+.inside {
+    position: absolute;
+    padding: 5%;
+    width: 80%;
+    height: auto;
+    left: 5%;
+    top: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamp {
+    z-index: 999999;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+
+.stampImg {
+    width: 70%;
+    z-index: 900;
+}
+
+.recBox {
+    width: 65%; 
+    height: 85%; 
+    position: absolute;
+    z-index: 100;
+    opacity: 0.8;
+    background-image: url('../../images/grid.png');
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+model-viewer {
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    filter: grayscale(100%);
+    --progress-bar-color: transparent;
+    z-index: 9999;
+}
+
+.stamp  {
+    display: grid;
+    place-items: center;
+}
+
+/* white paper in front*/
+#paper {
+    position: absolute;
+    z-index: 200;
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 27%;
+}
+
+form {
+    z-index: 500;
+    position: absolute;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    left: 30%;
+    top: 100%;
+}
+
+/* Dear & Cordially */
+.salutation {
+    font-size: 2vw;
+    line-height: 1;
+    /* padding-top: 8%; */
+    font-family: FT88;
+}
+
+/* iPod Nano & Ambrose */
+#name {
+    color: black;
+    font-family: FT88;
+    font-size: 2vw;
+    /* width: 25%; */
+    border-bottom: 0;
+}
+
+/* You gave me... */
+#message {
+    width: 50%;
+    font-family: FT88;
+    font-size: 1.6vw;
+    /* padding-top: 2%; */
+    padding-bottom: 2%;
+    line-height: 1.2;
+}
+
+/* message blanks */
+.blank {
+    width: 20%;
+    font-size: 1.6vw;
+    color: black;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px dashed black;
+    font-family: FT88;
+}
+
+button {
+    border: none;
+    font-family: FT88-Italic;
+    background: none;
+    color: #121CFF;
+    text-decoration: underline;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+}
+
+.buttons {
+    position: absolute;
+    z-index: 555;
+    width: 80%;
+    top: 280%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    line-height: 3;
+}
+
+button:hover {
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+    .stamp {
+        top: 80%;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+}
+
+/* @media screen and (min-width: 800px) {
+    model-viewer {
+        width: 18%;
+        height: 18%;
+    }
+    h1 {
+    font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    model-viewer {
+        width: 20%;
+        height: 20%;
+    }
+}
+@media screen and (min-width: 1080px) {
+    model-viewer {
+        width: 25%;
+        height: 25%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    model-viewer {
+        width: 30%;
+        height: 30%;
+    }
+} */
+
+

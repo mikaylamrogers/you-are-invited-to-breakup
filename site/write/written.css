@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(#FFFFFF, #F1BCBC, #6adef7, #FFFFFF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: FT88;
+    src: url('fonts/FT88-Serif.ttf');
+}
+
+h1 {
+    font-family: FT88;
+    color: black;
+    text-align: center;
+    font-size: 1.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* envelope & paper */
+.letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* envelope behind */
+#closedenvelope {
+    width: 60%;
+    height: auto;
+    float: right;
+    z-index: -222;
+    padding-left: 15%;
+}
+
+/* white paper in front*/
+#paper {
+    position: absolute;
+    z-index: 222;
+    width: 40%;
+    height: auto;
+    padding-right: 10%;
+}
+
+@font-face {
+    font-family: Edwardian;
+    src: url('fonts/EdwardianScriptITC.ttf');
+}
+
+@font-face {
+    font-family: FT88;
+    src: url('fonts/FT88-Serif.ttf');
+}
+
+/* entire form */
+.writing {
+    position: absolute;
+    z-index: 400;
+    top: 9%;
+    left: 28%;
+    color: black;
+    padding-top: 5%;
+}
+
+/* Dear & Cordially */
+#cursive {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    line-height: 0.9;
+    padding-top: 2%;
+}
+
+/* You gave me... */
+#message {
+    width: 46%;
+    font-family: FT88;
+    font-size: 1.6vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    line-height: 1.5;
+}
+
+#reset, #save, #send {
+    font-size: 1.5vw;
+    border: 0;
+    color: black;
+    opacity: 1;
+    font-family: FT88;
+    border: 1px solid black;
+    border-radius: 30px 30px 30px 30px;
+    padding: 5%;
+    background-color: white;
+}
+
+#reset:hover, #save:hover, #send:hover {
+    background-color: #6adef7;
+    transition: 1s;
+}
+
+.buttons {
+    display: block;    
+
+    /* display: flex; */
+    justify-content: space-between;
+    text-align: left;
+    gap: 5%;
+    bottom: 50%;
+    position: absolute;
+}
+
+/* @media (max-width: 400px) {
+
+} */
+
+

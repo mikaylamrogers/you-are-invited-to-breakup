@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Select a Device You Want to Breakup With</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+        $( ".stamp" ).draggable();
+        } );
+    </script>
+
+</head>
+<body>
+    <div class="inside">
+        <h1>SELECT A STAMP WITH THE DEVICE YOU WANT TO BREAKUP WITH:</h1>
+
+        <div id="stampGrid">
+            <a href="write/html/dsi.html">
+                <div class="stamp">
+                    <model-viewer src="models/dsi.glb" id="dsi" class="stampModel" auto-rotate progressive></model-viewer> 
+                    <div class="recBox" id="recBox1"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp1">
+                </div>
+            </a>
+
+            <a href="write/html/iphone6.html">
+                <div class="stamp">
+                    <model-viewer src="models/iphone6.glb" id="iphone6" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox2"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp2">
+                </div>
+            </a>
+
+            <a href="write/html/polaroid.html">
+                <div class="stamp">
+                    <model-viewer src="models/polaroidcamera.glb" id="polaroidcamera" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox3"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp3">
+                </div>
+            </a>
+
+            <a href="write/html/iphone4.html">
+                <div class="stamp">
+                    <model-viewer src="models/iphone4.glb" id="iphone4" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox4"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp4">
+                </div>
+            </a>
+        </div>
+
+        <div id="stampGrid2">
+            <div></div>
+
+            <a href="write/html/ipod.html">
+                <div class="stamp">
+                    <model-viewer src="models/ipodnano.glb" id="ipodnano" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox5"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp5">
+                </div>
+            </a>
+
+            <a href="write/html/mino.html">
+                <div class="stamp">
+                    <model-viewer src="models/mino.glb" id="mino" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox6"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp6">
+                </div>
+            </a>
+
+            <a href="write/html/casio.html">
+                <div class="stamp">
+                    <model-viewer src="models/casio.glb" id="casio" auto-rotate progressive></model-viewer>   
+                    <div class="recBox" id="recBox7"></div>  
+                    <img src="images/stamp.png" class="stampImg" id="stamp7">
+                </div>
+            </a>
+
+            <div></div>
+        </div>
+
+    </div>  
+
+
+    <div class="flex-container">
+        <div class="flex-child left">📀</div>
+        <div class="flex-child middle">🖊️</div>
+        <div class="flex-child right">📬</div>
+    </div>
+    
+    <div id="manila"></div>
+
+</body>
+</html>

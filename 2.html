@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Invited to Breakup</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow: hidden;
+            background-image: url('images/back.png');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            z-index: -1;
+        }
+
+        @font-face {
+            font-family: FT88;
+            src: url('site/fonts/FT88-Serif.ttf');
+        }
+
+        @font-face {
+            font-family: FT88-Italic;
+            src: url('site/fonts/FT88-Italic.otf');
+        }
+
+        h2, #nav {
+            font-family: FT88-Italic;
+            background: none;
+            color: #121CFF;
+            text-decoration: underline;
+            font-size: 3rem;
+            text-shadow: 2px 2px 2px rgba(156, 152, 152, 1);
+            text-align: right;
+            bottom: 0;
+        }
+
+        h2:hover, #nav:hover {
+            text-decoration: none;
+        }
+
+        p {
+            font-family: FT88;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            color: black;
+            text-align: center;
+            font-size: 2vw;
+            width: 38%;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .to, .from {
+            font-family: FT88-Italic;
+        }
+
+        .from {
+            text-align: right;
+        }
+
+        .letter2 {
+            font-size: 1vw;
+            transform: translate(-50%, -62%);
+        }
+
+        #env2 {
+            position: absolute;
+            z-index: 9999;
+        }
+
+        .opened {
+            display: none;
+        }
+
+        .to, .from {
+            font-family: FT88-Italic;
+        }
+
+        .from {
+            text-align: right;
+        }
+
+        .letter3 {
+            font-size: 1vw;
+            transform: translate(-50%, -25%);
+            line-height: 1.8;
+        }
+
+        a, a:visited {
+            color: #121CFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="unopened">
+        <img src="images/2.2.png" style="width: 50%; pointer-events: none;" id="env2">
+
+        <p class="letter2">
+            <span class="to">To whom it may concern,</span><br><br>
+
+            13 years ago, Smart Design created <a href="https://vimeo.com/11854531" target="_blank">The Breakup Letter</a>—a design research tool to understand the  emotional connection between people and their products, services, and experiences. Today, we live in a booming digital age where the replacement cycle length of consumer smartphones is falling to 2 years. By 2030, the number of smart devices collecting, analyzing, and sharing data should hit 50 billion. In other words, we live in a constant breakup and makeup world. In this moment, I warmly invite you to write a breakup letter to a correspondent of your choice <a href="../write/index.html">here.</a><br><br> 
+
+        </p>
+
+        <img src="images/2.png" style="width: 50%;">
+    </div>
+
+    <div class="opened">
+        <p class="letter3">
+            <span class="to">To whom it may concern,</span><br><br>
+
+            13 years ago, Smart Design created <a href="https://vimeo.com/11854531" target="_blank">The Breakup Letter</a>—a design research tool to understand the  emotional connection between people and their products, services, and experiences. Today, we live in a booming digital age where the replacement cycle length of consumer smartphones is falling to 2 years. By 2030, the number of smart devices collecting, analyzing, and sharing data should hit 50 billion. In other words, we live in a constant breakup and makeup world. In this moment, I warmly invite you to write a breakup letter to a correspondent of your choice <a href="site/index.html">here</a>.<br><br> 
+        
+            <span class="from">Cordially,<br>Mikayla</span>
+        </p>
+
+        <img src="images/3.png" style="width: 50%;" id="open">
+    </div>
+
+
+   <!-- <h2><a href="3.html" id="nav">></a></h2> -->
+   <script src="script2.js"></script>
+</body>
+</html>

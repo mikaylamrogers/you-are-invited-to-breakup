@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Invited to Breakup</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        @font-face {
+            font-family: FT88;
+            src: url('site/fonts/FT88-Serif.ttf');
+        }
+
+        @font-face {
+            font-family: FT88-Italic;
+            src: url('site/fonts/FT88-Italic.otf');
+        }
+
+        html {
+            height: 100%;
+        }       
+
+        body {
+            height: 100%;
+            font-family: FT88;
+            background-attachment: fixed;
+            background-color: #ededed;
+            cursor: url('cursors/pen.png');
+        }
+
+        #droppable, #droppable0, #droppable00, #droppable000, #droppable2, #droppable3, #droppable4, #droppable5, #droppable6, #droppable7, #droppable8, #droppable9, #droppable10, #droppable11, #droppable12, #droppable13, #droppable14, #droppable15, #droppable16, #droppable17, #droppable18, #droppable19, #droppable20, #droppable21 { 
+            width: 4.5vw; height: 4.5vw; padding: 0.6em; float: left; margin: 2px; background-color: #f0e3b1; opacity: 88%; box-shadow: 5px 5px 5px rgba(156, 152, 152, 1); border: none;
+        }
+
+        #droppable0, #droppable00, #droppable000 {
+            background-color: white;
+        }
+
+        .drops {
+            transform: translate(3%, 10%);
+        }
+
+        .are, .to  {
+            display: grid;
+        }
+
+        .last {
+            display: flex;
+            padding: 0;
+        }
+
+        button {
+            text-align: center;
+            display: none;
+            position: absolute;
+            z-index: 5;
+            padding: 1%;
+            font-size: 2vw;
+            transform: translate(595%, 20%);
+            font-family: FT88;
+            background-color: white;
+            border: none;
+            box-shadow: 5px 5px 5px rgba(156, 152, 152, 1);
+            animation: fadeIn 1s; 
+        }
+
+        button:hover {
+            background-color: #f5f5f5;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #container {
+            left: 0px;
+            top: -100px;
+            height: calc(100vh + 100px);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #animate {
+            margin: 0 auto;
+            width: 20px;
+            overflow: visible;
+            position: relative;
+        }
+
+        #all {
+            overflow: hidden;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+        }
+
+        p {
+            color: black;
+        }
+
+        model-viewer {
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            filter: grayscale(100%);
+            --progress-bar-color: transparent;
+            z-index: 9999;
+            visibility: hidden;
+        }
+
+        #dsi {
+            top: 70%;
+        }
+
+        #casio {
+            top: 60%;
+            left: 40%;
+        }
+
+        #iphone4 {
+            top: 0%;
+            left: 40%;
+        }
+
+        #iphone6 {
+            top: 10%;
+            left: 0;
+        }
+
+        #ipodnano {
+            top: 50%;
+            left: 20%;
+        }
+
+        #mino {
+            top: 40%;
+            left: 60%;
+        }
+
+        #polaroid {
+            top: 0%;
+            left: 70%;
+        }
+    </style>
+</head>
+<body>
+    <!-- DROPS -->
+    <div class="drops">
+        <div class="you">
+            <div id="droppable0" class="ui-widget-header" class="drop"></div> <!-- BLANK -->
+            <div id="droppable00" class="ui-widget-header" class="drop"></div> <!-- BLANK -->
+            <div id="droppable" class="ui-widget-header" class="drop"> <!-- Y--><p>1</p></div>
+            <div id="droppable2" class="ui-widget-header" class="drop"></div> <!-- O-->
+            <div id="droppable3" class="ui-widget-header" class="drop"></div> <!-- U-->
+        </div>
+
+        <div class="are">
+            <div id="droppable000" class="ui-widget-header" class="drop"></div> <!-- BLANK -->
+            <div id="droppable4" class="ui-widget-header" class="drop"> <!-- A --> <p>2</p></div>
+            <div id="droppable5" class="ui-widget-header" class="drop"></div> <!-- R --> 
+        </div>
+
+        <div class="invited">
+            <div id="droppable6" class="ui-widget-header" class="drop"> <!-- I --><p>3</p></div>
+            <div id="droppable7" class="ui-widget-header" class="drop"> <!-- N --></div>
+            <div id="droppable8" class="ui-widget-header" class="drop"> <!-- V --></div>
+            <div id="droppable9" class="ui-widget-header" class="drop"> <!-- I --></div>
+            <div id="droppable10" class="ui-widget-header" class="drop"> <!-- T --></div>
+            <div id="droppable11" class="ui-widget-header" class="drop"> <!-- E --></div>
+
+            <div class="to">
+                <div id="droppable12" class="ui-widget-header" class="drop"> <!-- D --> </div>
+                <div id="droppable000" class="ui-widget-header" class="drop"></div> <!-- BLANK -->
+                <div id="droppable13" class="ui-widget-header" class="drop"> <!-- T --> <p>4</p></div>
+
+                <div class="last">
+                    <div id="droppable14" class="ui-widget-header" class="drop"> <!-- O --></div>
+                    <div id="droppable000" class="ui-widget-header" class="drop"></div> <!-- BLANK -->
+
+                    <div class="bbreak">
+                        <div class="breakup">
+                            <div id="droppable15" class="ui-widget-header" class="drop"><p>5</p></div> <!-- B -->
+                            <div id="droppable16" class="ui-widget-header" class="drop"> <!-- R --></div>
+                            <div id="droppable17" class="ui-widget-header" class="drop"> <!-- E --></div>
+                            <div id="droppable18" class="ui-widget-header" class="drop"> <!-- A --> </div>
+                            <div id="droppable19" class="ui-widget-header" class="drop"> <!-- K --> </div>
+                            <div id="droppable20" class="ui-widget-header" class="drop"> <!-- U --> </div>
+                            <div id="droppable21" class="ui-widget-header" class="drop"> <!-- P --> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <a href="2.html"><button type="button"> I ACCEPT </button> </a>
+
+    <model-viewer src="site/models/dsi.glb" id="dsi" class="stampModel" auto-rotate progressive></model-viewer> 
+    <model-viewer src="site/models/casio.glb" id="casio" class="stampModel" auto-rotate progressive></model-viewer>
+    <model-viewer src="site/models/iphone4.glb" id="iphone4" class="stampModel" auto-rotate progressive></model-viewer> 
+    <model-viewer src="site/models/iphone6.glb" id="iphone6" class="stampModel" auto-rotate progressive></model-viewer>  
+    <model-viewer src="site/models/ipodnano.glb" id="ipodnano" class="stampModel" auto-rotate progressive></model-viewer> 
+    <model-viewer src="site/models/mino.glb" id="mino" class="stampModel" auto-rotate progressive></model-viewer> 
+    <model-viewer src="site/models/polaroidcamera.glb" id="polaroid" class="stampModel" auto-rotate progressive></model-viewer> 
+
+    <script src="script.js"></script>
+</body>
+</html>

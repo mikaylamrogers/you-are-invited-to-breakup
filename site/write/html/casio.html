@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <title>Dear Old Calculator</title>
+</head>
+<body>
+    <div class="inside">
+        <div class="stamp">
+            <model-viewer src="models/casio.glb" id="dsi" class="stampModel" auto-rotate progressive></model-viewer> 
+            <div class="recBox" id="recBox1"></div>  
+            <img src="../../images/stamp.png" class="stampImg" id="stamp1">
+        </div>
+
+        <h1>WRITE YOUR LETTER:</h1>
+
+        <section class="writing"></section>
+                <img src="../images/rectangle.png" id="paper">
+
+            <form method="POST" action="write_data.php" id="writeLetter">
+                    <div class="salutation">Dear <input type="text" id="name" name="name1" placeholder="Old Calculator" style="width: 28%;">,</div><br>
+
+                    <div id="message">
+                    You gave me my first glimpse into a <input type="text" class="blank" name="blank1" placeholder="digital" style="width: 23%;"> reality.
+                    I loved growing up with you. But I'm afraid I've found someone else, someone who can do so much more than just <input tye="text" class="blank" name="blank2" placeholder="crunch"> numbers, and who lets me <input type="text" class="blank" name="blank3" placeholder="call" style="width: 12%;"> with other <input type="text" class="blank" name="blank4" placeholder="friends" style="width: 23%;">.
+                    </div>
+                    
+                    <br><div class="salutation">Cordially,<br> <input type="text" id="name" name="name2" placeholder="Ambrose"></div>
+                </form>
+
+        </section>
+
+        <div class="buttons">
+            <div class="col">
+                <button type="reset" form="writeLetter">RESET</button><br>
+                <a href="../../index.html"><button>BACK</button></a>
+            </div>
+
+            <div class="col">
+                <button type="submit" form="writeLetter">SEND</button><br>
+                <!-- <button type="#">SAVE</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- background, manila, tabs -->
+
+    <div class="flex-container">
+        <div class="flex-child left">📀</div>
+        <div class="flex-child middle">🖊️</div>
+        <div class="flex-child right">📬</div>
+    </div>
+    
+    <div id="manila"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
